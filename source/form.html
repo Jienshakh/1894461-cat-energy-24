@@ -35,17 +35,17 @@
       <h1 class="page-main__title">Подбор программы</h1>
       <form class="schedule-form" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="schedule-form__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
-        <div class="schedule-form__pii-cat pii-cat">
+        <div class="schedule-form__about-cat about-cat">
           <h3 class="visually-hidden">Персональные данные кота (кошки)</h3>
-          <p class="pii-cat__input input">
+          <p class="about-cat__input input">
             <label for="name">Имя:*</label>
             <input class="input__field" type="text" name="name" id="name" placeholder="Барсик" required>
           </p>
-          <p class="pii-cat__input input">
+          <p class="about-cat__input input">
             <label for="weight">Вес:*</label>
             <input class="input__field" type="text" name="weight" id="weight" placeholder="7" required>
           </p>
-          <p class="pii-cat__input input">
+          <p class="about-cat__input input">
             <label for="age">Возраст:</label>
             <input class="input__field" type="text" name="age" id="age" placeholder="7">
           </p>
@@ -54,21 +54,21 @@
           <h3 class="visually-hidden">Выбор программы развития</h3>
           <ul class="direction__list">
             <li class="direction__item">
-              <label class="direction__control control">
+              <label class="direction__control control control--radio">
                 <input class="visually-hidden control__input" type="radio" name="direction-group" value="Похудение" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Похудение</span>
               </label>
             </li>
             <li class="direction__item">
-              <label class="direction__control control">
+              <label class="direction__control control control--radio">
                 <input class="visually-hidden control__input" type="radio" name="direction-group" value="Набор массы">
                 <span class="control__mark"></span>
                 <span class="control__label">Набор массы</span>
               </label>
             </li>
             <li class="direction__item">
-              <label class="direction__control control">
+              <label class="direction__control control control--radio">
                 <input class="visually-hidden control__input" type="radio" name="direction-group" value="Не знаю">
                 <span class="control__mark"></span>
                 <span class="control__label">Не знаю (нужен ваш совет)</span>
@@ -78,20 +78,19 @@
         </div>
         <div class="schedule-form__contact contact-detail">
           <h3 class="contact-detail__title">Контактные данные (владельца кота)</h3>
-          <p class="contact-detail__input input">
+          <p class="contact-detail__input input input--email">
             <label for="email">E-mail:*</label>
             <input class="input__field" type="text" name="email" id="email" placeholder="kuklachev@gmail.com" required>
           </p>
-          <p class="contact-detail__input input">
+          <p class="contact-detail__input input input--phone">
             <label for="phone">Телефон:*</label>
             <input class="input__field" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
           </p>
         </div>
         <div class="schedule-form__comment comment">
-          <p class="comment__input input">
+          <p class="comment__input input--textarea">
             <label class="visually-hidden" for="comment">Комментарий о повадках кота</label>
-            <textarea class="input__field textarea-field" name="comment" id="comment"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="comment__textarea-field" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </p>
         </div>
         <div class="schedule-form__additional additional">
@@ -119,7 +118,7 @@
             </li>
           </ul>
         </div>
-        <button class="button" type="submit">Отправить заявку</button>
+        <button class="schedule-form__button button" type="submit">Отправить заявку</button>
         <p class="schedule-form__note">
           * — Обязательные поля
         </p>
