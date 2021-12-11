@@ -1,0 +1,55 @@
+.catalog-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  row-gap: 13px;
+}
+
+.catalog-card__wrapper-image {
+  justify-self: center;
+  width: 50%;
+}
+
+.catalog-card__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.catalog-card__wrapper-text {
+  width: 50%;
+}
+
+.catalog-card__link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 18px;
+
+  & h3 {
+    font-weight: inherit;
+    width: 76px;
+    font-size: 16px;
+    line-height: 20px;
+    .indents-reset;
+  }
+}
+
+.catalog-card__attributes {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-card__attribute {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  .arial-text;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog-card__button {
+  width: 100%;
+}
