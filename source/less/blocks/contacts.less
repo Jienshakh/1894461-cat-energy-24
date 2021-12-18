@@ -1,5 +1,7 @@
-.contacts {
-  background-color: #f2f2f2;
+.contacts__wrapper {
+  &--bg-color {
+    background-color: @concrete;
+  }
 }
 
 .contacts__address {
@@ -9,7 +11,7 @@
 }
 
 .contacts__commercial {
-  .indents-reset;
+  margin: 0;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
@@ -17,17 +19,10 @@
 
 .contacts__text {
   display: block;
-  .arial-text;
+  .arial-text();
   line-height: 20px;
 }
 
 .contacts__location {
   position: relative;
-}
-
-.contacts__location-pin {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -45%);
 }

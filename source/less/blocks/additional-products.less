@@ -3,7 +3,7 @@
 }
 
 .additional-products__title {
-  font-weight: inherit;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   margin: 0;
@@ -11,17 +11,17 @@
 }
 
 .additional-products__list {
-  .clear-list;
+  .clear-list();
   margin-bottom: 40px;
 }
 
 .additional-products__item {
   padding-top: 13px;
   padding-bottom: 19px;
-  border-top: 1px solid #cdcdcd;
+  border-top: 1px solid @silver;
 
   &:last-child {
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid @silver;
   }
 }
 
@@ -30,15 +30,15 @@
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 16px;
-  font-weight: inherit;
-  color: #222222;
+  font-weight: 400;
+  color: @mine-shaft;
   text-transform: uppercase;
 }
 
 .additional-products__price {
   margin: 0;
   margin-bottom: 12px;
-  .arial-text;
+  .arial-text();
   line-height: 14px;
   display: flex;
   justify-content: space-between;
@@ -47,16 +47,16 @@
 .additional-products__gift {
   width: 280px;
   height: 290px;
-  background-color: #68b738;
+  background-color: @apple;
   background-image: url("../img/gift.jpg");
   background-repeat: no-repeat;
 }
 
 .additional-products__gift-text {
-  .indents-reset;
-  .arial-text;
+  padding-top: 16px;
+  .arial-text();
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
+  color: @white;
   text-align: center;
 }

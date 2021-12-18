@@ -23,21 +23,16 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #222222;
+  color: @mine-shaft;
   margin-bottom: 18px;
 
-  & h3 {
-    font-weight: inherit;
+  h3 {
+    font-weight: 400;
     width: 76px;
     font-size: 16px;
     line-height: 20px;
-    .indents-reset;
+    margin: 0;
   }
-}
-
-.catalog-card__attributes {
-  display: flex;
-  flex-direction: column;
 }
 
 .catalog-card__attribute {
@@ -45,7 +40,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin: 0;
-  .arial-text;
+  .arial-text();
   font-size: 12px;
   line-height: 16px;
 }
