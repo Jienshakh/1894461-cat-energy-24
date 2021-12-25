@@ -49,7 +49,7 @@
     <main class="page-main">
       <div class="page-main__wrapper">
         <h1 class="visually-hidden">Интернет магазин функционального питания для котов</h1>
-        <section class="catalog-section">
+        <section class="wrapper catalog-section">
           <div class="catalog-section__wrapper">
             <h2 class="visually-hidden ">Выбор раздела каталога</h2>
             <div class="catalog-section__item section">
@@ -79,7 +79,7 @@
           </div>
         </section>
         <section class="advantages">
-          <div class="advantages__wrapper">
+          <div class="wrapper advantages__wrapper">
             <h2 class="advantages__title">Как это работает</h2>
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--useful">
@@ -110,10 +110,12 @@
           </div>
         </section>
         <section class="proof">
-          <div class="proof__wrapper">
+          <div class="wrapper proof__title-wrapper">
             <h2 class="proof__title">Живой пример</h2>
-            <div class="proof__wrapper-inner">
-              <div class="proof__text-wrapper">
+          </div>
+          <div class="proof__background">
+            <div class="proof__wrapper">
+              <div class="wrapper proof__text-wrapper">
                 <p class="proof__description">
                   Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
                   на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих
@@ -133,18 +135,20 @@
                   </p>
                 </div>
               </div>
-              <div class="proof__image-wrapper">
-                <img class="proof__photo" src="img/cat-before-mobile.png" alt="Фото кота до диеты">
-                <div class="proof__range range">
-                  <button class="range__toggle toggle" type="button">Было</button>
-                  <div class="range__scale">
-                    <div class="range__bar">
-                      <button class="range__slider" type="button">
-                        <span class="visually-hidden">Изменить вес</span>
-                      </button>
+              <div class="proof__image-background">
+                <div class="wrapper proof__image-wrapper">
+                  <img class="proof__photo" src="img/cat-before-mobile.png" alt="Фото кота до диеты">
+                  <div class="proof__range range">
+                    <button class="range__toggle toggle" type="button">Было</button>
+                    <div class="range__scale">
+                      <div class="range__bar">
+                        <button class="range__slider" type="button">
+                          <span class="visually-hidden">Изменить вес</span>
+                        </button>
+                      </div>
                     </div>
+                    <button class="range__toggle toggle" type="button">Стало</button>
                   </div>
-                  <button class="range__toggle toggle" type="button">Стало</button>
                 </div>
               </div>
             </div>
@@ -167,7 +171,7 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="wrapper page-footer__wrapper">
         <div class="page-footer__logo footer-logo">
           <div class="footer-logo__wrapper">
             <a class="footer-logo__link">

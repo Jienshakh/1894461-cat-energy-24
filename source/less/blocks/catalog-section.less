@@ -1,19 +1,13 @@
 .catalog-section__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
     margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    padding-left: 110px;
-    padding-right: 110px;
     margin-bottom: 71px;
   }
 }
@@ -21,10 +15,8 @@
 .catalog-section__item {
   & + & {
     margin-top: 20px;
-  }
 
-  @media (min-width: @desktop-width) {
-    & + & {
+    @media (min-width: @desktop-width) {
       margin-top: 0;
     }
   }
