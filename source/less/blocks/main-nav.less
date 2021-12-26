@@ -1,13 +1,25 @@
 .main-nav {
+  position: absolute;
+  top: 65;
+  left: auto;
+  right: auto;
+  width: 320px;
+  height: 200px;
   margin: auto;
   margin-right: 0;
+  background-color: @white;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__toggle {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 14px;
+  top: -49px;
   right: 20px;
 
   @media (min-width: @tablet-width) {
