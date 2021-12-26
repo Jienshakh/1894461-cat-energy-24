@@ -1,3 +1,17 @@
+.footer-logo__wrapper {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: 156px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 413px;
+  }
+}
+
+
 .footer-logo__link {
   display: block;
 }
@@ -5,4 +19,8 @@
 .footer-logo__image {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 128px;
+  }
 }
