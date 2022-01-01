@@ -1,5 +1,9 @@
 .additional-products {
-  padding: 25px 20px 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .additional-products__title {
@@ -10,9 +14,21 @@
   margin-bottom: 36px;
 }
 
+.additional-products__wrapper-inner {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .additional-products__list {
   .clear-list();
   margin-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
 
 .additional-products__item {
@@ -22,6 +38,22 @@
 
   &:last-child {
     border-bottom: 1px solid @silver;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+    border-left: 1px solid @silver;
+    border-right: 1px solid @silver;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 230px 280px 244px;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 17px;
+    align-items: center;
   }
 }
 
@@ -50,6 +82,17 @@
   background-color: @apple;
   background-image: url("../img/gift.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 288px;
+  }
 }
 
 .additional-products__gift-text {

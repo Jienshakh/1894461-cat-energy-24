@@ -1,6 +1,12 @@
 .contact-detail {
-  padding-top: 26px;
-  padding-bottom: 24px;
+  margin-bottom: 65px;
+}
+
+.contact-detail__input-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-bottom: 69px;
+  }
 }
 
 .contact-detail__title {
@@ -8,4 +14,9 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
 }
