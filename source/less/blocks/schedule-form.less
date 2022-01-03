@@ -1,4 +1,6 @@
 .schedule-form {
+  margin-bottom: 32px;
+
   @media (min-width: @desktop-width) {
     margin-bottom: 82px;
   }
@@ -45,14 +47,20 @@
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    width: 282px;
+    width: auto;
     margin: 0;
     margin-right: 61px;
-    padding: 13px 45px;
+    padding: 13px 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 13px 222px;
   }
 }
 
 .schedule-form__note {
   margin: 0;
   text-align: center;
+  .arial-text();
+  line-height: 16px;
 }

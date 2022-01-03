@@ -1,0 +1,85 @@
+.control {
+  position: relative;
+  display: block;
+}
+
+.control__label {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  color: @mine-shaft;
+  text-transform: uppercase;
+
+  &--checkbox {
+    color: @black;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.control__mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid @silver;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -59px;
+  }
+}
+
+// Radio //
+
+.control__input[type="radio"]:checked {
+  & + .control__mark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13.5px;
+    height: 13.5px;
+    background-color: @apple;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+// Checkbox //
+
+.control__input[type="checkbox"]:checked {
+  & + .control__mark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/check-on.svg");
+
+    @media (min-width: @tablet-width) {
+      background-size: 24px auto;
+      width: 24px;
+      height: 19px;
+    }
+  }
+}

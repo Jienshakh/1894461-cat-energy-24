@@ -1,9 +1,31 @@
+.show-more__wrapper {
+  padding-top: 53px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 42px;
+    padding-right: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .show-more__text {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: @cod-gray;
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+  }
 }
 
 .show-more__note {
@@ -12,4 +34,10 @@
   line-height: 16px;
   text-align: center;
   color: @tundora;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

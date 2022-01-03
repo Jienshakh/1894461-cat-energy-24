@@ -1,6 +1,7 @@
 .direction {
   border-top: 1px solid @gainsboro;
   border-bottom: 1px solid @gainsboro;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -9,9 +10,11 @@
 }
 
 .direction__wrapper {
-  width: auto;
-  padding: 0;
-  margin: 0;
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .direction__list {
@@ -31,18 +34,5 @@
     @media (min-width: @tablet-width) {
       margin-top: 22px;
     }
-  }
-}
-
-.direction__control-label {
-  display: block;
-  font-size: 16px;
-  line-height: 18px;
-  color: @mine-shaft;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
   }
 }

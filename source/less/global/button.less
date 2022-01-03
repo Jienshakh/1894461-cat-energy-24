@@ -1,12 +1,13 @@
 .button {
+  font-family: "Oswald", sans-serif;
   display: block;
   border: none;
   text-decoration: none;
   color: @white;
   background-color: @apple;
   font-size: 16px;
+  line-height: 20px;
   padding: 8px 44px;
-  line-height: 18px;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -14,5 +15,10 @@
   &--silver {
     background-color: @concrete;
     color: @tundora;
+
+    @media (min-width: @desktop-width) {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
   }
 }
