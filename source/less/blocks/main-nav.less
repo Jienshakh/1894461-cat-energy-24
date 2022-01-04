@@ -91,6 +91,29 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--active {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: @apple;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--active-index {
+      &::before {
+        content: "";
+        background: @white;
+      }
+    }
   }
 }
 
