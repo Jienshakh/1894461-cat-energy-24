@@ -4,7 +4,7 @@
   left: auto;
   right: auto;
   width: 320px;
-  min-height: 200px;
+  height: 200px;
   margin: auto;
   margin-right: 0;
   z-index: 1;
@@ -26,6 +26,7 @@
   right: 20px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -88,6 +89,14 @@
 .main-nav__item {
   text-align: center;
   border-top: 1px solid @mercury;
+
+  &:hover a {
+    color: @menu-hover;
+  }
+
+  & a[disabled] {
+    .isDisabled();
+  }
 
   @media (min-width: @tablet-width) {
     border: none;
