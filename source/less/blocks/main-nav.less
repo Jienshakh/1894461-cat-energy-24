@@ -1,17 +1,20 @@
 .main-nav {
   position: absolute;
-  top: 65;
+  top: 65px;
   left: auto;
   right: auto;
   width: 320px;
   height: 200px;
   margin: auto;
   margin-right: 0;
-  background-color: @white;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    display: block;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -19,11 +22,58 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  top: -49px;
+  top: -45px;
   right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-nav--closed {
+  & .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+}
+
+.main-nav--opened {
+  & .main-nav__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      background-color: @black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed {
+    & .main-nav__item {
+      display: none;
+    }
   }
 }
 
@@ -40,8 +90,39 @@
   text-align: center;
   border-top: 1px solid @mercury;
 
+  &:hover a {
+    color: @menu-hover;
+  }
+
+  & a[disabled] {
+    .isDisabled();
+  }
+
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--active {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: @apple;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--active-index {
+      &::before {
+        content: "";
+        background: @white;
+      }
+    }
   }
 }
 
@@ -55,6 +136,14 @@
   text-decoration: unset;
   padding-top: 22px;
   padding-bottom: 24px;
+  background-color: @white;
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      color: @white;
+      background-color: transparent;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -66,6 +155,5 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: @white;
   }
 }

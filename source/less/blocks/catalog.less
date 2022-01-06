@@ -1,9 +1,16 @@
 .catalog__list {
   .clear-list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    justify-content: space-between;
+  }
 }
 
 .catalog__item {
-  padding: 25px 20px 19px;
+  padding: 25px 0 19px;
   border-top: 1px solid @gallery;
 
   &:last-child {
