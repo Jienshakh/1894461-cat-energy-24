@@ -1,4 +1,8 @@
 .range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (min-width: @tablet-width) {
     padding-top: 370px;
   }
@@ -6,4 +10,33 @@
   @media (min-width: @desktop-width) {
     padding-top: 300px;
   }
+}
+
+.range__toggle {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.range__scale {
+  width: 86px;
+  height: 16px;
+  background-color: @white;
+  border: 1px solid @silver;
+  border-radius: 6px;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+.range__bar {
+  width: 36px;
+  height: 6px;
+  background-color: @apple;
+  border-radius: 6px;
+}
+
+.range__slider {
+  display: none;
 }

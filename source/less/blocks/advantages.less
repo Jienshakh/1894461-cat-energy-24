@@ -52,4 +52,32 @@
 
 .advantages__description {
   margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: -70px;
+    background-color: @apple;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--useful::before {
+    background-image: url("../img/icon_leaf.svg");
+  }
+
+  &--quickly::before {
+    background-image: url("../img/icon_tub.svg");
+  }
+
+  &--convenient::before {
+    background-image: url("../img/icon_eat.svg");
+  }
+
+  &--effectively::before {
+    background-image: url("../img/icon_alarm.svg");
+  }
 }

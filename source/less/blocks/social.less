@@ -29,5 +29,29 @@
   display: block;
   width: 22px;
   height: 22px;
-  background-color: #e7e7e7;
+  background-color: @social-bg;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+
+  &--vkontakte {
+    -webkit-mask-image: url("../img/vkontakte.svg");
+  }
+
+  &--instagram {
+    -webkit-mask-image: url("../img/instagram.svg");
+  }
+
+  &--facebook {
+    -webkit-mask-image: url("../img/facebook.svg");
+  }
+
+  &:hover,
+  &:active {
+    background-color: @apple;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: @social-disabled;
+  }
 }
