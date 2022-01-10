@@ -33,7 +33,7 @@
 
 .proof__background {
   @media (min-width: @desktop-width) {
-    background-color: @white-smoke;
+    background-color: @concrete;
   }
 }
 
@@ -59,9 +59,9 @@
 
   @media (min-width: @desktop-width) {
     width: 436px;
-    margin-right: 193px;
+    margin: 0;
+    margin-right: 96px;
     padding: 0;
-    margin-bottom: 0;
   }
 }
 
@@ -198,9 +198,15 @@
   @media (min-width: @tablet-width) {
     background-color: @white-smoke;
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .proof__image-wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding-bottom: 56px;
   }
@@ -211,20 +217,46 @@
   }
 }
 
-.proof__photo {
-  display: block;
-  margin-bottom: 15px;
-
+.proof__cat {
   @media (min-width: @tablet-width) {
-    width: 592px;
-    height: 511px;
+    display: flex;
+    width: 591px;
     position: absolute;
+    top: -175px;
     left: 50%;
     transform: translateX(-50%);
-    top: -167px;
+  }
+}
+
+.proof__cat-condition {
+  &--after {
+    display: none;
   }
 
-  @media (min-width: @desktop-width) {
-    top: -237px;
+  @media (min-width: @tablet-width) {
+    height: 511px;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+
+    & img {
+      width: auto;
+      position: absolute;
+      height: 100%;
+    }
+
+    &--before {
+      & img {
+        left: 0;
+      }
+    }
+
+    &--after {
+      display: block;
+
+      & img {
+        right: 0;
+      }
+    }
   }
 }

@@ -3,6 +3,11 @@
   align-items: center;
   margin: 0;
 
+  &--email,
+  &--phone {
+    position: relative;
+  }
+
   & + & {
     margin-top: 13px;
 
@@ -49,7 +54,86 @@
   padding: 13px 14px 15px;
   border: 1px solid @gainsboro;
 
+  &--icon {
+    padding-right: 45px;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 10px 19px 11px 19px;
+
+    &--icon {
+      padding-right: 45px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid @silver;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid @tundora;
+    box-shadow: 0 0 0 1px @tundora;
+    outline: none;
+
+    & + .input__icon--email {
+      stroke: @apple;
+    }
+
+    & + .input__icon--phone {
+      fill: @apple;
+    }
+  }
+
+  &--error {
+    border: 1px solid @input-error;
+    box-shadow: 0 0 0 1px @input-error;
+
+    & + .input__icon--email {
+      stroke: @input-error;
+    }
+
+    & + .input__icon--phone {
+      fill: @input-error;
+    }
+  }
+
+  &--error:focus {
+    border: 1px solid @input-error;
+    box-shadow: 0 0 0 1px @input-error;
+
+    & + .input__icon--email {
+      stroke: @input-error;
+    }
+
+    & + .input__icon--phone {
+      fill: @input-error;
+    }
+  }
+
+  &--error:hover {
+    border: 1px solid @input-error;
+    box-shadow: 0 0 0 1px @input-error;
+
+    & + .input__icon--email {
+      stroke: @input-error;
+    }
+
+    & + .input__icon--phone {
+      fill: @input-error;
+    }
+  }
+}
+
+.input__icon {
+  position: absolute;
+  right: 15px;
+
+  &--email {
+    stroke: @black;
+  }
+
+  &--phone {
+    fill: @black;
   }
 }

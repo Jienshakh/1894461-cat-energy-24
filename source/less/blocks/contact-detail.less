@@ -20,9 +20,17 @@
   margin: 0;
   margin-bottom: 35px;
 
+  & span {
+    width: 190px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+
+    & span {
+      width: max-content;
+    }
   }
 }

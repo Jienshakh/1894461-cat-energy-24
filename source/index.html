@@ -11,23 +11,28 @@
       <div class="page-header__wrapper page-header__wrapper--index">
         <div class="page-header__menu page-header__menu--index">
           <a class="page-header__logo">
-            <img class="page-header__logo-image" src="img/logo-image.svg" alt="Логотип">
-            <img class="page-header__logo-title" src="img/logo-title.svg" alt="Надпись сайта" width="101" height="18">
+            <div class="page-header__logo-image-wrapper">
+              <picture>
+                <source media="(min-width: 1220px)" srcset="img/logo-image-desktop.svg">
+                <source media="(min-width: 708px)" srcset="img/logo-image-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-image.svg" alt="Логотип">
+              </picture>
+            </div>
           </a>
           <nav class="main-nav main-nav--closed">
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active main-nav__item--active-index">
+              <li class="main-nav__item main-nav__item--active main-nav__item--active-index main-nav__item--index">
                 <a class="main-nav__link main-nav__link--index">
                   Главная
                 </a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item main-nav__item--index">
                 <a href="catalog.html" class="main-nav__link main-nav__link--index">
                   Каталог продукции
                 </a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item  main-nav__item--index">
                 <a href="form.html" class="main-nav__link main-nav__link--index"  >
                   Подбор программы
                 </a>
@@ -41,7 +46,11 @@
             <p class="schedule__slogan">
               Занялся собой? Займись котом!
             </p>
-            <img class="schedule__image" src="img/shedule-image-mobile.png" alt="Банка Cat Energy" width="280" height="270">
+            <picture>
+              <source media="(min-width: 1220px)" srcset="img/shedule-image-desktop.png 1x, img/shedule-image-desktop.png 2x">
+              <source media="(min-width: 708px)" srcset="img/shedule-image-tablet.png 1x, img/shedule-image-tablet.png 2x">
+              <img class="schedule__image" src="img/shedule-image-mobile.png" srcset="img/shedule-image-mobile.png 2x" alt="Банка Cat Energy" width="280" height="270">
+            </picture>
             <a href="#" class="schedule__button button">Подобрать программу</a>
           </div>
         </section>
@@ -83,27 +92,27 @@
           <div class="wrapper advantages__wrapper">
             <h2 class="advantages__title">Как это работает</h2>
             <ul class="advantages__list">
-              <li class="advantages__item advantages__item--useful">
+              <li class="advantages__item">
                 <h3 class="visually-hidden">Полезно</h3>
-                <p class="advantages__description">
+                <p class="advantages__description advantages__description--useful">
                   Функциональное питание содержит только полезные питательные вещества.
                 </p>
               </li>
-              <li class="advantages__item advantages__item--quickly">
+              <li class="advantages__item">
                 <h3 class="visually-hidden">Быстро</h3>
-                <p class="advantages__description">
+                <p class="advantages__description advantages__description--quickly">
                   Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
                 </p>
               </li>
-              <li class="advantages__item advantages__item--convenient">
+              <li class="advantages__item">
                 <h3 class="visually-hidden">Удобно</h3>
-                <p class="advantages__description">
+                <p class="advantages__description advantages__description--convenient">
                   Замените один-два приема обычной еды на наше функциональное питание.
                 </p>
               </li>
-              <li class="advantages__item advantages__item--effectively">
+              <li class="advantages__item">
                 <h3 class="visually-hidden">Эффективно</h3>
-                <p class="advantages__description">
+                <p class="advantages__description advantages__description--effectively">
                   Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
                 </p>
               </li>
@@ -138,7 +147,17 @@
               </div>
               <div class="proof__image-background">
                 <div class="wrapper proof__image-wrapper">
-                  <img class="proof__photo" src="img/cat-before-mobile.png" alt="Фото кота до диеты">
+                  <div class="proof__cat">
+                    <div class="proof__cat-condition proof__cat-condition--before">
+                      <picture>
+                        <source media="(min-width: 708px)" srcset="img/cat-fatty.png 1x, img/cat-fatty@2x.png 2x">
+                        <img class="proof__photo" src="img/cat-before-mobile.png" alt="Фото кота до диеты" width="280" height="232 ">
+                      </picture>
+                    </div>
+                    <div class="proof__cat-condition proof__cat-condition--after">
+                      <img class="proof__photo" src="img/cat-skinny.png" alt="Фото кота после диеты">
+                    </div>
+                  </div>
                   <div class="proof__range range">
                     <button class="range__toggle toggle" type="button">Было</button>
                     <div class="range__scale">
@@ -203,7 +222,9 @@
         </div>
         <div class="page-footer__copyright">
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="page-footer__copyright-text">HTML Academy</span>
-            <img class="page-footer__copyright-logo" src="img/htmlacademy-mobile.svg" alt="Логотип HTML Academy">
+            <svg class="page-footer__copyright-logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
+            </svg>
           </a>
         </div>
       </div>

@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    background-color: @apple;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  & span {
+    background-color: @white;
+    margin: 0 -22px 0;
+    padding: 0 22px 0;
+    display: block;
+    width: max-content;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 -40px 0;
+      padding: 0 40px 0;
+    }
+  }
+}

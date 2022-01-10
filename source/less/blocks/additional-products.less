@@ -98,23 +98,65 @@
   background-image: url("../img/gift.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
+  & svg {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 59px;
+  }
 
   @media (min-width: @tablet-width) {
-    width: 707px;
+    background-image: url("../img/gift-tablet.jpg");
+    width: 100%;
     height: 200px;
+
+    & svg {
+      left: 77px;
+      top: 57px;
+      transform: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/gift-desktop.jpg");
     width: 245px;
     height: 288px;
+
+    & svg {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 56px;
+    }
   }
 }
 
 .additional-products__gift-text {
-  padding-top: 16px;
   .arial-text();
   font-size: 16px;
   line-height: 20px;
   color: @white;
   text-align: center;
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 161px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    top: 71px;
+    right: 124px;
+    left: auto;
+    transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 41px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

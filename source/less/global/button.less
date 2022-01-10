@@ -12,13 +12,32 @@
   text-align: center;
   cursor: pointer;
 
+  &:hover {
+    background-color: @button-action;
+  }
+
+  &:active {
+    background-color: @button-action;
+    color: @white-opacity03;
+  }
+
   &--silver {
     background-color: @concrete;
     color: @tundora;
+    width: 100%;
 
     @media (min-width: @desktop-width) {
-      padding-left: 38px;
-      padding-right: 38px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: @gallery;
+    }
+
+    &:active {
+      color: @button-silver-active;
     }
   }
 }

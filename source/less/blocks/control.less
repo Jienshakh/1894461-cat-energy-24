@@ -1,6 +1,10 @@
 .control {
   position: relative;
   display: block;
+
+  &:hover .control__mark {
+    border-color: @radio-hover;
+  }
 }
 
 .control__label {
@@ -27,7 +31,7 @@
   left: -45px;
   width: 30px;
   height: 30px;
-  border: 1.5px solid @silver;
+  border: 1px solid @silver;
   cursor: pointer;
   box-sizing: border-box;
 
@@ -42,10 +46,19 @@
   }
 }
 
+.control__input {
+  &:disabled {
+    & ~ .control__label,
+    & + .control__mark {
+      opacity: 0.3;
+    }
+  }
+}
+
 // Radio //
 
-.control__input[type="radio"]:checked {
-  & + .control__mark::before {
+.control__input[type="radio"] {
+  &:checked + .control__mark::before {
     content: "";
     position: absolute;
     top: 50%;
