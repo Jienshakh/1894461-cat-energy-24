@@ -16,10 +16,12 @@
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  background-color: transparent;
   border: none;
   border-bottom: 1px dotted @black-opacity04;
   text-transform: uppercase;
   padding: 0;
+  padding-bottom: 1px;
   cursor: pointer;
 
   &:hover {
@@ -28,6 +30,11 @@
 
   &:active {
     border-color: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
