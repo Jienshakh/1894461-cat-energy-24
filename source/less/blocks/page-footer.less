@@ -30,6 +30,19 @@
   padding-left: 20px;
   padding-right: 20px;
 
+  &:hover svg {
+    fill: @apple;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+
+    & svg {
+      fill: @apple;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -38,4 +51,8 @@
     justify-content: unset;
     column-gap: 22px;
   }
+}
+
+.page-footer__copyright-logo {
+  fill: @social-bg;
 }

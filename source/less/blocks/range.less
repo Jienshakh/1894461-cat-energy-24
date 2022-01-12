@@ -1,9 +1,101 @@
 .range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (min-width: @tablet-width) {
     padding-top: 370px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 300px;
+    padding-top: 361px;
+  }
+}
+
+.range__toggle {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted @black-opacity04;
+  text-transform: uppercase;
+  padding: 0;
+  padding-bottom: 1px;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+
+  &:active {
+    border-color: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.range__scale {
+  width: 86px;
+  height: 16px;
+  background-color: @white;
+  border: 1px solid @silver;
+  border-radius: 6px;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  margin-left: 13px;
+  margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: @range-scale-bg;
+    padding: 0;
+    border: none;
+  }
+}
+
+.range__bar {
+  width: 36px;
+  height: 6px;
+  background-color: @apple;
+  border-radius: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    position: relative;
+  }
+}
+
+.range__slider {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: @apple;
+    border: 1px solid @silver;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 11px @white, 0 1px 3px @toggle-shadow;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: inset 0 0 0 11px @white, 0 2px 4px @toggle-shadow-hover;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 0 11px @white, 0 3px 5px @toggle-shadow-active;
+      border-color: @apple;
+    }
   }
 }

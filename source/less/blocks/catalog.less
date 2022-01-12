@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     column-gap: 60px;
     justify-content: space-between;
+    row-gap: 141px;
   }
 }
 
@@ -15,5 +16,10 @@
 
   &:last-child {
     border-bottom: 1px solid @gallery;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    background-color: @concrete;
   }
 }
