@@ -109,6 +109,10 @@
     fill: @white;
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/gift-tablet.jpg");
     width: 100%;
@@ -118,6 +122,10 @@
       left: 77px;
       top: 57px;
       transform: none;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-tablet@2x.jpg");
     }
   }
 
@@ -130,6 +138,10 @@
       left: 50%;
       transform: translateX(-50%);
       top: 56px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-desktop@2x.jpg");
     }
   }
 }
