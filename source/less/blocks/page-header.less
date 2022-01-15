@@ -15,6 +15,10 @@
       background-position: center;
       z-index: -1;
 
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/shedule-bg-mobile@2x.jpg");
+      }
+
       @media (min-width: @tablet-width) {
         display: none;
       }
@@ -29,6 +33,10 @@
         height: 100%;
         background-image: url("../img/shedule-bg-desktop.jpg");
         background-position: right;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/shedule-bg-desktop@2x.jpg");
+        }
       }
     }
   }
