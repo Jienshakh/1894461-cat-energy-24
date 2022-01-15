@@ -21,6 +21,7 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 32px;
+    counter-reset: orderedlist;
   }
 }
 
@@ -46,7 +47,21 @@
     box-sizing: border-box;
     margin-bottom: 0;
     width: 250px;
-    padding: 151px 29px 57px 0;
+    padding: 151px 5px 57px 0;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      counter-increment: orderedlist;
+      content: counter(orderedlist);
+      color: @concrete;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      top: 0;
+      left: 118px;
+      z-index: -1;
+    }
   }
 }
 
