@@ -1,14 +1,14 @@
 .range {
   display: flex;
-  align-items: center;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
+    align-items: center;
     padding-top: 370px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 361px;
+    padding-top: 290px;
   }
 }
 
@@ -40,14 +40,15 @@
 
 .range__scale {
   width: 86px;
-  height: 16px;
+  height: 14px;
   background-color: @white;
   border: 1px solid @silver;
   border-radius: 6px;
-  padding: 4px 6px;
+  padding: 3px 6px;
   box-sizing: border-box;
-  margin-left: 13px;
-  margin-right: 13px;
+  margin-left: 19px;
+  margin-right: 16px;
+  margin-top: 2px;
 
   @media (min-width: @tablet-width) {
     width: 426px;
@@ -55,6 +56,8 @@
     background-color: @range-scale-bg;
     padding: 0;
     border: none;
+    margin-left: 23px;
+    margin-right: 23px;
   }
 }
 

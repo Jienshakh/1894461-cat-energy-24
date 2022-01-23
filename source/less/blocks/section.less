@@ -1,9 +1,9 @@
 .section__wrapper {
-  padding: 30px 20px 18px;
+  padding: 31px 20px 21px;
   background-color: @concrete;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 316px 53px 52px;
+    padding: 77px 316px 57px 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -16,7 +16,7 @@
 .section__title {
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 69px;
+  padding-left: 71px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -32,13 +32,13 @@
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left: 2px;
 
     @media (min-width: @tablet-width) {
       width: 200px;
       height: 200px;
       right: -254px;
-      top: 0;
+      top: 15px;
       left: auto;
       transform: translateY(0);
     }
@@ -60,9 +60,8 @@
     height: 50px;
     background-image: url("../img/icons/lose-weight.svg");
     background-repeat: no-repeat;
-    left: 7px;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 8px;
+    top: -9px;
 
     @media (min-width: @tablet-width) {
       width: 140px;
@@ -70,7 +69,7 @@
       background-size: 100%;
       left: auto;
       right: -225px;
-      top: auto;
+      top: 4px;
       transform: translateY(0);
     }
 
@@ -101,7 +100,7 @@
       background-size: 100%;
       left: auto;
       right: -286px;
-      top: 51px;
+      top: 58px;
       transform: translateY(0);
     }
 
@@ -119,26 +118,33 @@
     font-size: 36px;
     line-height: 36px;
     padding: 0;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    text-align: center;
-    margin-bottom: 73px;
+    padding-left: 162px;
+    margin-bottom: 74px;
   }
 }
 
 .section__description {
   .arial-text;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   border-bottom: 1px solid @alto;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     color: @black;
     border: none;
+    padding: 0;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 26px;
   }
 }
 
@@ -156,7 +162,7 @@
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
+    width: 42px;
     height: 100%;
     transition: background-position 0.2s;
     background-image: url("../img/icons/arrow-sm.svg");
@@ -164,6 +170,14 @@
     top: 0;
     right: 0;
     background-position: -8px center;
+
+    @media (min-width: @tablet-width) {
+      width: 32px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 29px;
+    }
   }
 
   @media (min-width: @tablet-width) {

@@ -2,7 +2,7 @@
   position: relative;
 
   @media (min-width: @desktop-width) {
-    padding: 120px 0;
+    padding: 96px 0 107px;
   }
 }
 
@@ -30,11 +30,11 @@
 .contacts__address {
   position: relative;
   display: flex;
-  padding: 28px 20px 26px;
+  padding: 26px 20px 26px;
   column-gap: 17px;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 60px 70px 60px 70px;
     column-gap: unset;
     justify-content: space-between;
     box-sizing: border-box;
@@ -42,7 +42,7 @@
 
   @media (min-width: @desktop-width) {
     background-color: @white;
-    padding: 56px 80px;
+    padding: 60px 80px;
     column-gap: 87px;
     width: 565px;
   }
@@ -73,10 +73,17 @@
   @media (min-width: @tablet-width) {
     width: 160px;
     text-align: right;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 

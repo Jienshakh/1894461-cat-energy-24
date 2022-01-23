@@ -8,19 +8,24 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    padding-top: 58px;
-    padding-bottom: 55px;
+    padding-top: 56px;
+    padding-bottom: 56px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 57px;
+    padding-top: 58px;
     padding-bottom: 58px;
   }
 }
 
 .page-footer__copyright {
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 .page-footer__copyright-link {
@@ -31,8 +36,6 @@
   .arial-text();
   font-size: 16px;
   line-height: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   &:hover svg {
     fill: @apple;
