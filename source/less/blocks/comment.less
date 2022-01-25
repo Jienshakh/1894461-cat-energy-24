@@ -41,6 +41,17 @@
   height: 150px;
   box-sizing: border-box;
 
+  &:hover {
+    border: 1px solid @silver;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid @tundora;
+    box-shadow: 0 0 0 1px @tundora;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     height: 174px;
     font-size: 20px;
