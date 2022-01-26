@@ -23,7 +23,7 @@
               </picture>
             </div>
           </a>
-          <nav class="main-nav main-nav--closed">
+          <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -267,7 +267,16 @@
           </div>
           <div class="contacts__location">
             <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1638100536515!5m2!1sen!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+            <div class="contacts__location-image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 320px)" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+                <img class="contacts__location-image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Наше расположение на карте" width="320" height="362">
+              </picture>
+            </div>
         </section>
       </div>
     </main>

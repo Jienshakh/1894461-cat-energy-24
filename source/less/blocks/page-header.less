@@ -3,27 +3,8 @@
     position: relative;
 
     &::after {
-      position: absolute;
-      top: 66px;
-      left: 0;
-      content: "";
-      width: 100%;
-      height: 302px;
-      background-color: @header-bg;
-      background-image: url("../img/shedule-bg-mobile.webp");
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: -1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/shedule-bg-mobile@2x.webp");
-      }
-
-      @media (min-width: @tablet-width) {
-        display: none;
-      }
-
       @media (min-width: @desktop-width) {
+        position: absolute;
         display: block;
         content: "";
         left: auto;
@@ -31,12 +12,14 @@
         top: 0;
         width: 50%;
         height: 100%;
-        background-image: url(../img/shedule-bg-desktop.webp);
+        background-color: @header-bg;
+        background-image: url("../img/shedule-bg-desktop.webp");
+        background-repeat: no-repeat;
         background-position: right bottom;
-      }
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/shedule-bg-desktop@2x.webp");
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/shedule-bg-desktop@2x.webp");
+        }
       }
     }
   }

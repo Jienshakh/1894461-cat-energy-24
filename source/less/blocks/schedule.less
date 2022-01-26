@@ -3,6 +3,28 @@
   color: @white;
   position: relative;
 
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 302px;
+    background-color: @header-bg;
+    background-image: url("../img/shedule-bg-mobile.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/shedule-bg-mobile@2x.webp");
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0 30px 0 88px;
     min-height: 810px;
